@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import Results from '../Results'
+
 import './Search.css'
 function Search() {
   const [state, setState] = useState({
@@ -21,6 +22,7 @@ function Search() {
       let results = data.Search;
       console.log(results);
       if(results){
+        setLoading(false)
         setState((prevState)=>{
           return{...prevState,results:results}
         })
@@ -33,6 +35,7 @@ function Search() {
   }
   return (
     <div className="Search">
+    
       
          <input className='search-input' type ="text" onChange={searchInput}/>
            
@@ -43,7 +46,7 @@ function Search() {
 Get Started
 </Link>
       </button> */}
-      <Results results={state.results} />
+      <Results loading={loading} results={state.results} />
     </div>
   )
 }

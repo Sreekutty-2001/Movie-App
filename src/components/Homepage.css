@@ -2,9 +2,40 @@
     background-color: black;
     width: 12rem;
     height: 2rem;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(211, 18, 18));
+    height: 6vh;
+  width: 15vw;
+  margin-top: 5rem;
+  border: none;
+border-radius: 5px;
+   
+}
+.home-btn:hover{
+
 }
 #home-link{
     text-decoration: none;
     color: white;
-   
+    
+    
+}
+#home-link:hover{
+    
+}
+.image{
+    /* background-image: url(../assets/transformers.jpg); */
+   background-repeat: no-repeat;
+   background-size: cover;
+background-color: black;
+display: flex;
+justify-content: center;
+
+
+}
+.img{
+    /* margin-right: 100px; */
+    height: 70vh;
+    width: 50%;
+    background-size: cover;
+    
 }

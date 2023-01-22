@@ -2,7 +2,7 @@ import React from 'react'
 // import Home from './Homepage'
 // import { Link, Route, Routes } from 'react-router-dom'
 import './Results.css'
-function Results({ results }) {
+function Results({ loading, results }) {
     return (
         <div className='category'>
 
@@ -10,7 +10,9 @@ function Results({ results }) {
             <div className="movie-div">
                 <h1>Movie</h1>
                 <div className="movie">
-                    {
+                    {loading ? (
+                        <h1>No Result</h1>
+                    ) : (
                         results.filter((e) => e.Type === "movie").map((e) => {
                             return (
                                 <div id="movie-single-div">
@@ -21,14 +23,15 @@ function Results({ results }) {
                                         borderRadius: "15px 15px 0 0",
                                     }} src={e.Poster} alt="" />
                                     <div className="movie-title">
-                                <h6>{e.Title}</h6>
-                                <h6>{e.Year}</h6>
+                                        <h2>{e.Title}</h2>
+                                        <h3>{e.Year}</h3>
+                                    </div>
                                 </div>
-                                </div>
-                                
+
                             )
-                            
+
                         })
+                    )
                     }
                 </div>
             </div>
@@ -37,28 +40,32 @@ function Results({ results }) {
                 <h1>Series</h1>
                 <div className="series">
                     {
+                        loading ? (
+                            <h1>No results</h1>
+                        ) : (
+                            results.filter((s) => s.Type === "series")
+                                .map((e) => {
+                                    return (
+                                        <div className="series-single-div">
+                                            <img style={{
 
-                        results.filter((s) => s.Type === "series")
-                            .map((e) => {
-                                return (
-                                    <div className="series-single-div">
-                                        <img style={{
-                                            height: "20rem",
-                                            width: "15rem",
-                                            marginBottom: "1rem",
-                                            borderRadius: "15px 15px 0 0",
-                                        }} src={e.Poster} />
-                                        <h6>{e.Title}</h6>
-                                        <h6>{e.Year}</h6>
-                                    </div>
-                                )
-                            })
+                                                height: "20rem",
+                                                width: "15rem",
+                                                marginBottom: "1rem",
+                                                borderRadius: "15px 15px 0 0",
+                                            }} src={e.Poster} />
+                                            <h4>{e.Title}</h4>
+                                        <h5>{e.Year}</h5>
+                                        </div>
+                                    )
+                                })
+                        )
                     }
                 </div>
-                
-                
+
+
             </div>
-        
+
 
 
         </div>
