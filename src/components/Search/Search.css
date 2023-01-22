@@ -1,5 +1,5 @@
 .search-btn{
-    background-color: rgb(209, 6, 6);
+    background-color:red ;
     color: white;
     border: none;
     width: 120px;
@@ -19,5 +19,5 @@
     margin-top: 20px;
 }
 .search-btn:hover{
-    background-color:rgb(169, 11, 11) ;
+    background-color:rgb(222, 8, 8) ;
 }

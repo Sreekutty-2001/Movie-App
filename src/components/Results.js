@@ -1,5 +1,6 @@
 import React from 'react'
-// import Home from './Home'
+// import Home from './Homepage'
+// import { Link, Route, Routes } from 'react-router-dom'
 import './Results.css'
 function Results({ results }) {
     return (
@@ -55,7 +56,9 @@ function Results({ results }) {
                     }
                 </div>
                 
+                
             </div>
+        
 
 
         </div>
