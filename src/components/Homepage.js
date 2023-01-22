@@ -9,8 +9,13 @@ function Homepage() {
         <img className='img' src={logo}alt="loading"/>
         
       </div>
-      <button className='home-btn' > <Link id='home-link' to="/search">Move on</Link> </button>
+      <div className="btn-div">
+      <div className='home-btn' > 
+      <Link id='home-link' to="/search">Move on</Link>
+       </div>
 
+      </div>
+     
     </div>
   )
 }
