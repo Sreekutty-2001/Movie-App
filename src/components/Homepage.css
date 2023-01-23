@@ -68,3 +68,9 @@
     background-size: cover;
 
 }
+.paragraph{
+    color: white;
+    font-family: 'Trebuchet MS', 'Trebuchet MS', Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 140px;
+    margin-top: 200px;
+}

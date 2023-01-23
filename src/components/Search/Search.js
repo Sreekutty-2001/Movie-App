@@ -37,7 +37,7 @@ function Search() {
     <div className="Search">
     
       
-         <input className='search-input' type ="text" onChange={searchInput}/>
+        <input className='search-input'  type ="text" onChange={searchInput}/>
            
             <button className="search-btn"onClick={search}>Search</button>
             

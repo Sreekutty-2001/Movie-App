@@ -7,6 +7,8 @@ function Homepage() {
     <div>
       <div className="image">
         <img className='img' src={logo}alt="loading"/>
+        <p className='paragraph'> Recreation is an important part of life and ,<br/>
+         Movies provide that avenue.🎞️</p>
         
       </div>
       <div className="btn-div">
